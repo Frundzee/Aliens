@@ -8,11 +8,14 @@ class Ship():
         self.settings = Settings()
         self.screen_rect = ai_game.get_rect()
 
-        self.image = pygame.image.load('images/rocket-ga.bmp') # Загружает изображение корабля и получает прямоугольник.
+            # Загружает изображение корабля и получает прямоугольник.
+        self.image = pygame.image.load('images/rocket-ga.bmp') 
         self.rect = self.image.get_rect()
-        self.rect.midbottom = self.screen_rect.midbottom # Каждый новый корабль появляется у нижнего края экрана.
+            # Каждый новый корабль появляется у нижнего края экрана.
+        self.rect.midbottom = self.screen_rect.midbottom 
 
-        self.x = float(self.rect.x)  # Сохранение вещественной координаты центра корабля.
+            # Сохранение вещественной координаты центра корабля.
+        self.x = float(self.rect.x)  
         self.moving_right = False  # Флаг перемещения
         self.moving_left = False
         
