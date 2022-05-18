@@ -5,7 +5,6 @@ class Bullet(Sprite):
 
     def __init__(self, ai_game):
         """Создает объект снарядов в текущей позиции корабля."""
-
         super().__init__()
         self.screen = ai_game.screen
         self.settings = ai_game.settings
@@ -19,13 +18,11 @@ class Bullet(Sprite):
 
     def update(self):
         """Перемещает снаряд вверх по экрану."""
-
-            # Обновление позиции снаряда в вещественном формате.
+        # Обновление позиции снаряда в вещественном формате.
         self.y -= self.settings.bullet_speed  
-            # Обновление позиции прямоугольника.
+        # Обновление позиции прямоугольника.
         self.rect.y = self.y  
 
     def draw_bullet(self):
         """Вывод снаряда на экран."""
-        
         pygame.draw.rect(self.screen, self.color, self.rect)
